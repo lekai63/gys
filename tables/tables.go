@@ -10,9 +10,13 @@ import "github.com/GoAdminGroup/go-admin/plugins/admin/modules/table"
 //
 // example:
 //
+// "merchants" => http://localhost:9033/admin/info/merchants
+//
 // example end
 //
 var Generators = map[string]table.Generator{
+
+	"merchants": GetMerchantsTable,
 
 	// generators end
 }
