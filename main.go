@@ -49,8 +49,8 @@ func startServer() {
 
 	models.Init(eng.PostgresqlConnection())
 
-	// 导入excel done!
-	initImport()
+	// 导入csv done! 注意excel保存为csv时检查银行账号、税号等是否变成了科学计数法
+	// initImport()
 
 	_ = r.Run(":8080")
 
