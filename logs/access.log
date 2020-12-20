@@ -36,3 +36,5 @@
 2020-12-18T00:32:32.163+0800	controller/handler.go:24	[GoAdmin] [37;44m 200 [0m [37;104m GET   [0m /admin/info/permission
 2020-12-18T00:32:34.064+0800	controller/handler.go:24	[GoAdmin] [37;44m 200 [0m [37;104m GET   [0m /admin/menu
 2020-12-18T00:32:37.370+0800	controller/handler.go:24	[GoAdmin] [37;44m 200 [0m [37;104m GET   [0m /admin/info/op
+2020-12-20T18:21:00.477+0800	controller/handler.go:24	[GoAdmin] [37;44m 200 [0m [37;104m GET   [0m /admin/info/merchants
+2020-12-20T18:24:01.072+0800	controller/handler.go:24	[GoAdmin] [37;44m 200 [0m [37;104m GET   [0m /admin/info/merchants

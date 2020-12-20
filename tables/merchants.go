@@ -98,39 +98,33 @@ func GetMerchantsTable(ctx *context.Context) table.Table {
 		FieldSortable().
 		FieldEditAble()
 	info.AddField("注册资本:元", "registered_capital", db.Int8).
-		FieldFilterable().
-		FieldSortable().
 		FieldEditAble().
 		FieldHide()
 	info.AddField("成立日期", "establish_date", db.Date).
-		FieldFilterable().
 		FieldSortable().
 		FieldEditAble().
 		FieldHide()
 	info.AddField("营业执照起始日", "operate_start", db.Date).
-		FieldFilterable().
 		FieldSortable().
 		FieldEditAble().
 		FieldHide()
 	info.AddField("营业执照终止日", "operate_end", db.Date).
-		FieldFilterable().
 		FieldSortable().
 		FieldEditAble().
 		FieldHide()
 	info.AddField("代账许可起始日", "bill_license_start", db.Date).
-		FieldFilterable().
+		FieldFilterable(types.FilterType{FormType: form.DatetimeRange}).
 		FieldSortable().
 		FieldEditAble().
 		FieldHide()
 	info.AddField("代账许可终止日", "bill_license_end", db.Date).
-		FieldFilterable().
+		FieldFilterable(types.FilterType{FormType: form.DatetimeRange}).
 		FieldSortable().
 		FieldEditAble().
 		FieldHide()
 	info.AddField("registered_city_id", "registered_city_id", db.Int8).
 		FieldHide()
 	info.AddField("法人", "legal_person", db.Text).
-		FieldFilterable().
 		FieldEditAble().
 		FieldHide()
 	info.AddField("企业类型", "enterprise_type", db.Text).
