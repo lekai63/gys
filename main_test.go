@@ -1,15 +1,16 @@
 package main
 
 import (
-	"./tables"
+	"gys/tables"
+	"log"
+	"testing"
+
 	"github.com/GoAdminGroup/go-admin/modules/config"
 	"github.com/GoAdminGroup/go-admin/tests"
 	"github.com/GoAdminGroup/go-admin/tests/common"
 	"github.com/GoAdminGroup/go-admin/tests/frameworks/gin"
 	"github.com/GoAdminGroup/go-admin/tests/web"
 	"github.com/gavv/httpexpect"
-	"log"
-	"testing"
 )
 
 // 黑盒测试

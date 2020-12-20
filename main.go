@@ -50,7 +50,7 @@ func startServer() {
 	models.Init(eng.PostgresqlConnection())
 
 	// 导入excel done!
-	// initImport()
+	initImport()
 
 	_ = r.Run(":8080")
 

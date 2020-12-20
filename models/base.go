@@ -7,6 +7,7 @@ import (
 )
 
 var (
+	// DB 为*gorm.DB
 	DB  *gorm.DB
 	err error
 )

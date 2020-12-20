@@ -1,19 +1,41 @@
-# GoAdmin 介绍
+# postgres 相关
 
-GoAdmin 是一个帮你快速搭建数据可视化管理应用平台的框架。 
+查找外键
+```
+SELECT
+    tc.table_schema,
+    tc.constraint_name,
+    tc.table_name,
+    kcu.column_name,
+    ccu.table_schema AS foreign_table_schema,
+    ccu.table_name AS foreign_table_name,
+    ccu.column_name AS foreign_column_name
+FROM
+    information_schema.table_constraints AS tc
+    JOIN information_schema.key_column_usage AS kcu
+      ON tc.constraint_name = kcu.constraint_name
+      AND tc.table_schema = kcu.table_schema
+    JOIN information_schema.constraint_column_usage AS ccu
+      ON ccu.constraint_name = tc.constraint_name
+      AND ccu.table_schema = tc.table_schema
+WHERE tc.constraint_type = 'FOREIGN KEY' AND tc.table_name='my_tablename';
+```
+
+删除外键
+```
+ALTER TABLE my_tablename DROP CONSTRAINT fk_to_drop;
+```
+
+# 使用GoAdmin框架
 
 - [github](https://github.com/GoAdminGroup/go-admin)
 - [论坛](http://discuss.go-admin.com)
 - [文档](https://book.go-admin.cn)
 
-## 目录介绍
-
 ```
 .
 ├── Dockerfile          Dockerfile
 ├── Makefile            Makefile
-├── adm.ini             adm配置文件
-├── admin.db            sqlite数据库
 ├── build               二进制构建目标文件夹
 ├── config.json         配置文件
 ├── go.mod              go.mod
@@ -27,11 +49,6 @@ GoAdmin 是一个帮你快速搭建数据可视化管理应用平台的框架。
 └── uploads             上传文件夹
 ```
 
-## 生成CRUD数据模型
-
-### 在线工具
-
-管理员身份运行后，访问：http://127.0.0.1:80/admin/info/generate/new
 
 ### 使用命令行工具
 
