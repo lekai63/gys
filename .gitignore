@@ -16,6 +16,6 @@
 *.csv
 config.json
 secret/
-logs/
+
 logs/info.log
 logs/access.log
