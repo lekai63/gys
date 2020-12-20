@@ -19,3 +19,4 @@ secret/
 
 logs/info.log
 logs/access.log
+logs/error.log
