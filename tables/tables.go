@@ -10,12 +10,14 @@ import "github.com/GoAdminGroup/go-admin/plugins/admin/modules/table"
 //
 // example:
 //
+// "areas" => http://localhost:9033/admin/info/areas
 //
 // example end
 //
 var Generators = map[string]table.Generator{
 
 	"merchants": GetMerchantsTable,
+	"areas":     GetAreasTable,
 
 	// generators end
 }
